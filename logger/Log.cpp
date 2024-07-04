@@ -8,7 +8,7 @@ namespace Logger {
 
     std::mutex log_mtx;
 
-    void startLog(const std::string_view filepath) {
+    void startLog(const std::string filepath) {
         shared_log = std::make_unique<Log>(filepath);
         Logger::log(Level::Info, "Initialized log");
     }
@@ -33,7 +33,7 @@ namespace Logger {
         shared_log->addLog(Logger::Info, message);
     }
 
-    Log::Log(const std::string_view filepath) : logfile{} {
+    Log::Log(const std::string filepath) : logfile{} {
         logfile.open(filepath);
     }
 
