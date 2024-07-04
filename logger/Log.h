@@ -18,7 +18,7 @@ namespace Logger {
         Info
     };
 
-    void startLog(std::string_view filepath);
+    void startLog(std::string filepath);
     void log(Level l, std::string_view message);
     void logFatal(std::string_view message);
     void logError(std::string_view message);
@@ -27,7 +27,7 @@ namespace Logger {
 
     class Log {
     public:
-        Log(std::string_view filepath);
+        Log(std::string filepath);
 
         void addLog(Level l, std::string_view message);
 
